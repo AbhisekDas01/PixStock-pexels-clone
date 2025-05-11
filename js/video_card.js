@@ -12,9 +12,7 @@ import { hoverOnPlay } from "./utils/hoverOnPlay.js";
  * crete videoCard
  */
 
-export const videoCard = function(video){
-
-    const root = window.location.origin;
+export const videoCard = function(video){    const root = "/PixStock-pexels-clone";
 
     const {
         height,

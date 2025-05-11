@@ -12,9 +12,7 @@ import { ripple } from "./utils/ripple.js";
  * @returns {Node} after creating card
  */
 
-export const collectionCard = function(collection){
-
-    const root = window.location.origin;
+export const collectionCard = function(collection){    const root = "/PixStock-pexels-clone";
 
     const {
 

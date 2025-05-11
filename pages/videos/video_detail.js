@@ -4,10 +4,10 @@
  * import
  */
 
-import { client } from "../../js/api_configure.js";
-import { ripple } from "../../js/utils/ripple.js";
-import { menu } from "../../js/menu.js";
-import { favorite } from "../../js/favorite.js";
+import { client } from "/PixStock-pexels-clone/js/api_configure.js";
+import { ripple } from "/PixStock-pexels-clone/js/utils/ripple.js";
+import { menu } from "/PixStock-pexels-clone/js/menu.js";
+import { favorite } from "/PixStock-pexels-clone/js/favorite.js";
 
 
 /**
