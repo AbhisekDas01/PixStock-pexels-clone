@@ -4,12 +4,12 @@
  * import
  */
 
-import { client } from "../../js/api_configure.js";
-import { ripple } from "../../js/utils/ripple.js";
-import { gridInit, updateGrid } from "../../js/utils/masonry_grid.js";
-import { photoCard } from "../../js/photo_card.js";
-import { menu } from "../../js/menu.js";
-import { favorite } from "../../js/favorite.js";
+import { client } from "/PixStock-pexels-clone/js/api_configure.js";
+import { ripple } from "/PixStock-pexels-clone/js/utils/ripple.js";
+import { gridInit, updateGrid } from "/PixStock-pexels-clone/js/utils/masonry_grid.js";
+import { photoCard } from "/PixStock-pexels-clone/js/photo_card.js";
+import { menu } from "/PixStock-pexels-clone/js/menu.js";
+import { favorite } from "/PixStock-pexels-clone/js/favorite.js";
 
 
 /**

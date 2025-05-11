@@ -16,8 +16,7 @@ import { favorite } from "./favorite.js";
  * @param {*} photo 
  */
 
-export const photoCard = (photo) => {
-    const root = window.location.origin;
+export const photoCard = (photo) => {    const root = "/PixStock-pexels-clone";
 
     const {
         alt,
