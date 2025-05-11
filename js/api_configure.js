@@ -6,7 +6,7 @@
 import { urlEncode } from "./utils/urlEncode.js"; 
 
 // API key for authorization
-const apiKey = '05NR0bxpf0T46SZWp8HoBgK8KFB3MQVc0AVEIfkNtlJUtnXJ8YrOI8o1';
+const apiKey = '<api-key>';
 
 // Setting up headers with the API key
 const headers = new Headers(); 
