@@ -45,11 +45,15 @@ export const videoCard = function(video){    const root = "/PixStock-pexels-clon
                 <source src="${link}" type="${file_type}">
 
             </video>
+        </div>        <div class="card-content">
+             <button class="icon-btn small ${favoriteObj.videos[id] ? "active" : ""}" aria-label="Add to favorite" data-ripple data-favorite-btn >
+                <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+
+                <div class="state-layer"></div>
+            </button>
         </div>
 
-        <div class="card-content">
-             <button class="icon-btn small ${favoriteObj.videos[id] ? "active" : ""}" aria-label="Add to favorite" data-ripple data-favorite-btn >
-            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+        <a href="${root}/pages/videos/video_detail.html?id=${id}" class="state-layer"></a>
 
             <div class="state-layer"></div>
         </button>
