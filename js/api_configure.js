@@ -36,7 +36,8 @@ let requestUrl = "";
 // Root URLs for different API endpoints
 const root = {
     default: "https://api.pexels.com/v1/",
-    videos: "https://api.pexels.com/videos/"
+    videos: "https://api.pexels.com/videos/",
+    collections: "https://api.pexels.com/v1/collections/"
 }
 
 // Object containing API client functions
@@ -117,9 +118,8 @@ export const client = {
          * @param {string} id Collection ID
          * @param {object} parameters URL parameters object
          * @param {Function} callback Callback function to handle the response data
-         */
-        detail(id , parameters ,  callback){
-            requestUrl = `${root.default}/collections/${id}?${urlEncode(parameters)}`;
+         */        detail(id , parameters ,  callback){
+            requestUrl = `${root.collections}${id}/media?${urlEncode(parameters)}`;
             fetchData(requestUrl , callback);
         }
     }

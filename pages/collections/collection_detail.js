@@ -37,28 +37,26 @@ document.title = `${decodeURIComponent(collectionObj.title)} collections`;
 
 
 const loadCollection = function(page){
+    console.log('Loading collection page:', page);
+    console.log('Collection ID:', collectionObj.collectionId);
 
     client.collections.detail(collectionObj.collectionId , {per_page: perPage , page: page}, (data) =>{
+        console.log('Collection data received:', data);
 
-        // console.log(data);
+        if (!data || !data.media) {
+            console.error('No media data found');
+            $loader.style.display = "none";
+            return;
+        }
 
-        totalPage = Math.ceil(data.total_results/ perPage);
-
-        data.media.forEach(item => {
-
+        totalPage = Math.ceil(data.total_results/ perPage);data.media.forEach(item => {
             let $card;
-
             
-            switch(item.type?.toLowerCase()){
-
-                
-                
-                case "photo":
-                    $card = photoCard(item);
-                    break;
-                case "video":
-                    $card = videoCard(item);
-                    break;  
+            // Check if the item has video_files to determine if it's a video
+            if (item.video_files) {
+                $card = videoCard(item);
+            } else {
+                $card = photoCard(item);
             }
             updateGrid($card , collectionGrid.columsHeight , collectionGrid.$colums);
 

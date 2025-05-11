@@ -27,7 +27,7 @@ export const collectionCard = function(collection){    const root = "/PixStock-p
     $card.classList.add("grid-card" , "list-item" ,"two-line");
 
     $card.setAttribute("title" , title); //sets the title for the card
-
+    
     $card.innerHTML = `
     <div>
         <h3 class="body-large">${title}</h3>
@@ -35,7 +35,7 @@ export const collectionCard = function(collection){    const root = "/PixStock-p
         <p class="body-medium label">${media_count} media</p>
     </div>
 
-    <a href="${root}/pages/collections/collection_detail.html?collectionId=${id}&title=${title}" class="state-layer"></a>                   
+    <a href="${root}/pages/collections/collection_detail.html?collectionId=${id}&title=${encodeURIComponent(title)}" class="state-layer"></a>                   
     `;
 
     ripple($card);
